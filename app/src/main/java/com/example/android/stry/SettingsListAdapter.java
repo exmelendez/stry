@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class SettingsListAdapter extends ArrayAdapter<Settings> {
+public class SettingsListAdapter extends ArrayAdapter<Stry> {
 
     private static final String TAG = "SettingsListAdapter";
     private Context mContext;
@@ -21,7 +21,7 @@ public class SettingsListAdapter extends ArrayAdapter<Settings> {
 
     }
 
-    public SettingsListAdapter(Context context, int resource, ArrayList<Settings> settingsAL) {
+    public SettingsListAdapter(Context context, int resource, ArrayList<Stry> settingsAL) {
         super(context, resource, settingsAL);
         mContext = context;
         mResource = resource;
@@ -31,13 +31,11 @@ public class SettingsListAdapter extends ArrayAdapter<Settings> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        String username = getItem(position).getUserName();
-        String notifications = getItem(position).getNotifications();
-        String logout = getItem(position).getLogout();
+        String title = getItem(position).getTitle();
+        String idea_desc = getItem(position).getIdea_desc();
+        String content = getItem(position).getContent();
 
-        Settings settings = new Settings(username);
-        settings.setLogout(logout);
-        settings.setNotifications(notifications);
+        Stry stry = new Stry(title, idea_desc, content);
 
         return convertView;
 
