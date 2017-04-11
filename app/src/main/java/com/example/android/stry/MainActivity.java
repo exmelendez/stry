@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         //addFragment method below is calling the addFragment Method made in SectionsPageAdapter
-        adapter.addFragment(new Tab1Fragment(), "Settings");
+        adapter.addFragment(new Tab1Fragment(), "Stry");
         adapter.addFragment(new Tab2Fragment(), "Home");
         adapter.addFragment(new Tab3Fragment(), "My Stry");
 

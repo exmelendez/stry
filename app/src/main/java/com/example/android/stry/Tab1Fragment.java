@@ -24,11 +24,11 @@ public class Tab1Fragment extends Fragment {
 
         ListView mListView = (ListView) view.findViewById(R.id.settings_listView);
 
-        Settings username = new Settings("cutie40two");
-        Settings username2 = new Settings("MrHotShot");
-        Settings username3 = new Settings("IamtheKing4life");
+        Stry username = new Stry("cutie40two");
+        Stry username2 = new Stry("MrHotShot");
+        Stry username3 = new Stry("IamtheKing4life");
 
-        ArrayList<Settings> settingsAL = new ArrayList<>();
+        ArrayList<Stry> settingsAL = new ArrayList<>();
         settingsAL.add(username);
         settingsAL.add(username2);
         settingsAL.add(username3);
