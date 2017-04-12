@@ -2,49 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
     android:layout_marginTop="10dp"
-    android:layout_marginLeft="7dp"
-    android:layout_marginRight="7dp"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     android:weightSum="100">
 
-   <TextView
-       android:id="@+id/untv"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Username"
-       android:textSize="30sp"
-       android:textColor="#000000"
-       android:textAlignment="center"
-       android:background="@drawable/tv_border"
-       android:paddingTop="7dp"
-       android:paddingBottom="7dp"
-       android:layout_marginBottom="10dp" />
+    <TextView
+        android:id="@+id/untv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tv_border"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:text="Username"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
 
-   <TextView
-       android:id="@+id/notifications_tv"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Notifications"
-       android:textSize="30sp"
-       android:textColor="#000000"
-       android:textAlignment="center"
-       android:background="@drawable/tv_border"
-       android:paddingTop="7dp"
-       android:paddingBottom="7dp"
-       android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/notifications_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/tv_border"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:text="Notifications"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
 
-   <TextView
-       android:id="@+id/logout_tv"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Logout"
-       android:textSize="30sp"
-       android:textColor="#000000"
-       android:textAlignment="center"
-       android:background="@drawable/tv_border"
-       android:paddingTop="7dp"
-       android:paddingBottom="7dp"/>
+    <TextView
+        android:id="@+id/logout_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_border"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:text="Logout"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
 
 
 </LinearLayout>
