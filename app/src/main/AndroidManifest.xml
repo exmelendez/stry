@@ -27,6 +27,16 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <activity android:name=".CreateStoryFragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".TestDialog"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+
+        </activity>
+
     </application>
 
 </manifest>
