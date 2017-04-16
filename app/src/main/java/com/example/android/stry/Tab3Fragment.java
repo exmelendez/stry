@@ -7,17 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Tab3Fragment extends Fragment {
 
     private static final String TAG = "Tab3Fragment";
     private Button btnTEST;
+    private TextView tv;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab3_fragment,container,false);
+        tv = (TextView) view.findViewById(R.id.textTab3);
+
         btnTEST = (Button) view.findViewById(R.id.btnTest3);
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
