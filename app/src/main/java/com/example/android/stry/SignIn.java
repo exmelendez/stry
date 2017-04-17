@@ -43,6 +43,7 @@ public class SignIn extends AppCompatActivity {
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
+                    toastMsg("Testing Sign in");
 
                 } else {
                     // User is signed out
@@ -53,19 +54,29 @@ public class SignIn extends AppCompatActivity {
             }
         };
 
+        //The actual working sign in function
+//        signIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                String email = mEmail.getText().toString();
+//                String pass = mPassword.getText().toString();
+//
+//                if (!email.equals("") && !pass.equals("")) {
+//                    mAuth.signInWithEmailAndPassword(email, pass);
+//                } else {
+//                    toastMsg("You didn't fill in all the fields");
+//                }
+//
+//            }
+//        });
+
+        //Testing sign in btn/function to save time
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String email = mEmail.getText().toString();
-                String pass = mPassword.getText().toString();
-
-                if (!email.equals("") && !pass.equals("")) {
-                    mAuth.signInWithEmailAndPassword(email, pass);
-                } else {
-                    toastMsg("You didn't fill in all the fields");
-                }
-
+              mAuth.signInWithEmailAndPassword("test@test.com", "123456");
             }
         });
 
