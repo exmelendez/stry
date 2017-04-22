@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
     android:orientation="vertical"
     android:id="@+id/story_create_popup_layout"
@@ -17,13 +18,21 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="60">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#50000000"
         android:textSize="16sp"
-        android:layout_marginBottom="20dp"
+        android:maxLength="60"
         android:padding="15dp"/>
+
+    </android.support.design.widget.TextInputLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -35,13 +44,21 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="140">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#50000000"
         android:textSize="16sp"
-        android:layout_marginBottom="20dp"
+        android:maxLength="140"
         android:padding="15dp"/>
+
+    </android.support.design.widget.TextInputLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -53,29 +70,11 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
 
-    <LinearLayout
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="char # "/>
-
-        <TextView
-            android:id="@+id/writing_contribution_char_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" / 400"/>
-
-    </LinearLayout>
+        app:counterEnabled="true"
+        app:counterMaxLength="400">
 
     <EditText
         android:id="@+id/writing_contribution_et"
@@ -83,10 +82,11 @@
         android:layout_height="wrap_content"
         android:background="#50000000"
         android:textSize="16sp"
-        android:layout_marginBottom="10dp"
-        android:maxLength="20"
+        android:maxLength="400"
         android:padding="15dp"
         />
+
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
