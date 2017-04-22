@@ -7,8 +7,6 @@
     android:id="@+id/story_create_popup_layout"
     android:background="@android:color/transparent">
 
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,13 +53,40 @@
         android:textStyle="bold"
         android:textAlignment="center"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="char # "/>
+
+        <TextView
+            android:id="@+id/writing_contribution_char_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / 400"/>
+
+    </LinearLayout>
+
     <EditText
+        android:id="@+id/writing_contribution_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#50000000"
         android:textSize="16sp"
-        android:padding="30dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:maxLength="20"
+        android:padding="15dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"

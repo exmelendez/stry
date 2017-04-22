@@ -6,11 +6,16 @@ import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class CreateStoryFragment extends Activity {
 
     private static final String TAG = "CreateStoryFragment";
+    private EditText writingContET;
+    private TextView writeContCharCountTV;
     private Button createStoryBtn;
+    private int writingCount;
 
 //    @Nullable
 //    @Override
@@ -34,6 +39,13 @@ public class CreateStoryFragment extends Activity {
         setContentView(R.layout.create_story_fragment);
         Log.d(TAG, "onCreate: Starting.");
 
+        writingContET = (EditText) findViewById(R.id.writing_contribution_et);
+        writeContCharCountTV = (TextView) findViewById(R.id.writing_contribution_char_count);
+        writingCount = writingContET.length();
+        String test = Integer.toString(writingCount);
+
+        writeContCharCountTV.setText(test);
+
 //        LinearLayout ll = (LinearLayout) findViewById(R.id.story_create_popup_layout);
 //        ll.setAlpha(0.1);
 
@@ -55,6 +67,7 @@ public class CreateStoryFragment extends Activity {
 
         getWindow().setLayout((int)(width * .90), (int)(height * .85));
 //        getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
 
 
     }
