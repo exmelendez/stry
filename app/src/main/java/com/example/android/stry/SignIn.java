@@ -18,7 +18,7 @@ public class SignIn extends AppCompatActivity {
 
     private static final String TAG = "SignIn";
     private EditText mEmail, mPassword;
-    private Button signIn, signUp;
+    private Button signIn, signUp, noInternetSignIn;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -26,6 +26,10 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
+
+        /*For Testing Purposes when no internet available */
+        noInternetSignIn = (Button) findViewById(R.id.no_internet_signin_btn);
+        /*Erase when releasing*/
 
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
@@ -43,7 +47,7 @@ public class SignIn extends AppCompatActivity {
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
-                    toastMsg("Testing Sign in");
+                    toastMsg("Internet Enabled Testing Sign In");
 
                 } else {
                     // User is signed out
@@ -76,7 +80,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-              mAuth.signInWithEmailAndPassword("test@test.com", "123456");
+                mAuth.signInWithEmailAndPassword("test@test.com", "123456");
             }
         });
 
@@ -85,6 +89,17 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View view) {
 
                 snackMsg(view, "Sign up message");
+
+            }
+        });
+
+        noInternetSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                toastMsg("Internet Disabled Testing Sign in");
 
             }
         });
@@ -113,4 +128,6 @@ public class SignIn extends AppCompatActivity {
         Snackbar.make(view, msg, Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
     }
+
+
 }
